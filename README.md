@@ -29,7 +29,7 @@ function register_user($conn){
 
     }
     if(count($error_array)<= 0){
-        $query = "insert into user (id,username,password,image)values('$new_id','username', MD5('$password'),'$save_name')";
+        $query = "insert into user (id,username,password,image)values('$new_id','$username', MD5('$password'),'$save_name')";
         $result = $conn->query($query);
     
     
